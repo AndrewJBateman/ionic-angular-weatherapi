@@ -32,11 +32,10 @@ export class ListPage implements OnInit {
 
 	}
 
-
 	getWeather() {
 			this.ionicStorage.get('city').then( city => {
 				if (city === null) {
-					this.weatherService.getWeatherFromApi('paris').subscribe( weather => {
+					this.weatherService.getWeatherFromApi('madrid').subscribe( weather => {
 						this.weather = weather;
 						console.log(weather);
 					});
@@ -50,7 +49,6 @@ export class ListPage implements OnInit {
 			}).catch(err => {
 				console.log(err);
 			});
-
 	}
 
 	ngOnInit() {
