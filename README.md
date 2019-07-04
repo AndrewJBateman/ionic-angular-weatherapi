@@ -15,7 +15,15 @@ App to display weather data from a [weather API](https://www.apixu.com/api.aspx)
 
 ## General info
 
-* The [weather API](https://www.apixu.com/api.aspx) is a fully managed weather API platform that provides extensive APIs that range from weather and astronomy through to time zone and geolocation.
+* The [weather API](https://www.apixu.com/api.aspx) is a fully managed weather API platform that provides extensive APIs
+  that supply the following data:
+
+* Real-time weather
+* Up to 14 day weather forecast
+* Historical weather inforamtion
+* Astronomy
+* Time zone
+* Geolocation data
 
 ## Screenshots
 
@@ -24,6 +32,8 @@ App to display weather data from a [weather API](https://www.apixu.com/api.aspx)
 ## Technologies
 
 * [Ionic v5.0.0](https://ionicframework.com/)
+
+* [Angular v7.2.2](https://angular.io/)
 
 * [Ionic/angular v4.1.0](https://www.npmjs.com/package/@ionic/angular)
 
@@ -37,16 +47,15 @@ App to display weather data from a [weather API](https://www.apixu.com/api.aspx)
 
 ## Code Examples
 
-* Extract from `service.ts` that gets data from the API.
+* Extract from `weather.service.ts` that gets data from the API.
 
 ```typescript
-export class NewsService {
-  currentArticle: any;
+export class WeatherService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private httpClient: HttpClient) {}
 
-  getData(url) {
-    return this.http.get(`${apiUrl}/${url}&apiKey=${apiKey}`);
+  getWeatherFromApi(city: string) {
+    return this.httpClient.get(`https://api.apixu.com/v1/current.json?key=${apiKey}&q=${city}`);
   }
 }
 ```
@@ -77,6 +86,9 @@ getWeather() {
 ## Features
 
 * Searches for weather data in any counry of the world.
+
+* Ionic storage module used: ased on LocalForage with support for SQLite, a file-ased approach.
+  There are issues with browser storage in local apps.  
 
 ## Status & To-do list
 
