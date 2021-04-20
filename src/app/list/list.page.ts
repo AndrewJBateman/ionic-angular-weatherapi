@@ -1,58 +1,63 @@
-import { Component, OnInit} from '@angular/core';
-import { WeatherService } from '../services/weather.service';
-import {FormGroup, FormControl, Validators } from '@angular/forms';
+import { Component, OnInit } from "@angular/core";
+import { WeatherService } from "../services/weather.service";
+import { FormGroup, FormControl, Validators } from "@angular/forms";
 // ionic storage
-import { Storage } from '@ionic/storage';
+import { Storage } from "@ionic/storage-angular";
 
 @Component({
-	selector: 'app-list',
-	templateUrl: 'list.page.html',
-	styleUrls: ['list.page.scss'],
+	selector: "app-list",
+	templateUrl: "list.page.html",
+	styleUrls: ["list.page.scss"],
 })
 export class ListPage implements OnInit {
-
-	constructor(private weatherService: WeatherService, private ionicStorage: Storage) {
-
-	}
+	constructor(
+		private weatherService: WeatherService,
+		private storage: Storage
+	) {}
 
 	public weatherForm = new FormGroup({
-		city: new FormControl('', Validators.required),
+		city: new FormControl("", Validators.required),
 	});
-	public weather;
-	public city;
+	public weather: Object;
+	public city: string;
 
 	search(formData: FormData) {
 		console.log(formData);
-		this.ionicStorage.set('city', formData['city']);
+		this.storage.set("city", formData["city"]);
 
-		this.weatherService.getWeatherFromApi(formData['city']).subscribe( weather => {
-			this.weather = weather;
-			console.log(weather);
-		});
-
+		this.weatherService
+			.getWeatherFromApi(formData["city"])
+			.subscribe((weather) => {
+				this.weather = weather;
+				console.log(weather);
+			});
 	}
 
 	getWeather() {
-			this.ionicStorage.get('city').then( city => {
+		this.storage
+			.get("city")
+			.then((city) => {
 				if (city === null) {
-					this.weatherService.getWeatherFromApi('madrid').subscribe( weather => {
-						this.weather = weather;
-						console.log(weather);
-					});
+					this.weatherService
+						.getWeatherFromApi("madrid")
+						.subscribe((weather) => {
+							this.weather = weather;
+							console.log(weather);
+						});
 				} else {
-					this.weatherService.getWeatherFromApi(city).subscribe( weather => {
+					this.weatherService.getWeatherFromApi(city).subscribe((weather) => {
 						this.weather = weather;
 						console.log(weather);
 					});
 				}
-
-			}).catch(err => {
+			})
+			.catch((err) => {
 				console.log(err);
 			});
 	}
 
-	ngOnInit() {
+	async ngOnInit() {
+    await this.storage.create();
 		this.getWeather();
 	}
-
 }

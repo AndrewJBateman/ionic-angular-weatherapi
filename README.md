@@ -1,21 +1,25 @@
 # Ionic Angular WeatherApi
 
-App to display weather data from a [weather API](https://www.apixu.com/api.aspx) using the [Ionic 5 framework](https://ionicframework.com/docs).
+App to display weather data from the [Weatherstack weather API](https://weatherstack.com/documentation) using the [Ionic 5 framework](https://ionicframework.com/docs).
 
 ## Table of contents
 
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Features](#features)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
+* [Ionic Angular WeatherApi](#ionic-angular-weatherapi)
+  * [Table of contents](#table-of-contents)
+  * [General info](#general-info)
+  * [Screenshots](#screenshots)
+  * [Technologies](#technologies)
+  * [Setup](#setup)
+  * [Code Examples](#code-examples)
+  * [Features](#features)
+  * [Status & To-do list](#status--to-do-list)
+  * [Inspiration](#inspiration)
+  * [:file_folder: License](#file_folder-license)
+  * [:envelope: Contact](#envelope-contact)
 
 ## General info
 
-* The [weather API](https://www.apixu.com/api.aspx) is a fully managed weather API platform that provides extensive APIs
+* The [Weatherstack weather API](https://weatherstack.com/documentation) is a fully managed weather API platform that provides extensive APIs
   that supply the following data:
 
 * Real-time weather
@@ -31,15 +35,11 @@ App to display weather data from a [weather API](https://www.apixu.com/api.aspx)
 
 ## Technologies
 
-* [Ionic v5.0.0](https://ionicframework.com/)
-
-* [Angular v7.2.2](https://angular.io/)
-
-* [Ionic/angular v4.1.0](https://www.npmjs.com/package/@ionic/angular)
-
-* [Ionic storage v2.2.0](https://www.npmjs.com/package/@ionic/storage)
-
-* [Weather API](https://www.apixu.com/api.aspx)
+* [Ionic v5](https://ionicframework.com/)
+* [Angular v11](https://angular.io/)
+* [Ionic/angular v5](https://www.npmjs.com/package/@ionic/angular)
+* [Ionic storage-angular v3](https://www.npmjs.com/package/@ionic/storage-angular)
+* [Weatherstack weather API](https://weatherstack.com/documentation)
 
 ## Setup
 
@@ -55,7 +55,7 @@ export class WeatherService {
   constructor(private httpClient: HttpClient) {}
 
   getWeatherFromApi(city: string) {
-    return this.httpClient.get(`https://api.apixu.com/v1/current.json?key=${apiKey}&q=${city}`);
+    return this.httpClient.get(`http://api.weatherstack.com/current?access_key=${apiKey}&query=${city}`);
   }
 }
 ```
@@ -86,21 +86,22 @@ getWeather() {
 ## Features
 
 * Searches for weather data in any counry of the world.
-
-* Ionic storage module used: ased on LocalForage with support for SQLite, a file-ased approach.
-  There are issues with browser storage in local apps.  
+* Ionic storage module used: based on LocalForage with support for SQLite, a file-based approach.
+  There are issues with browser storage in local apps.
 
 ## Status & To-do list
 
 * Status: Working.
-
 * To-do: add functionality
 
 ## Inspiration
 
-Project inspired by:
-[Aldo Caamal: Simple Weather App ( Ionic 4 / Angular 7 / Apixu API )](https://www.youtube.com/watch?v=P6RDIjF66dw&t=137s).
+* [Aldo Caamal: Simple Weather App ( Ionic 4 / Angular 7 / Apixu API )](https://www.youtube.com/watch?v=P6RDIjF66dw&t=137s).
 
-## Contact
+## :file_folder: License
 
-Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+* This project is licensed under the terms of the MIT license.
+
+## :envelope: Contact
+
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com

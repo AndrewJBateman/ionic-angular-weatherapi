@@ -1,16 +1,17 @@
-import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
-const apiKey = '';
+const apiKey = "";
 
 @Injectable({
-	providedIn: 'root'
+	providedIn: "root",
 })
 export class WeatherService {
-
 	constructor(private httpClient: HttpClient) {}
 
 	getWeatherFromApi(city: string) {
-		return this.httpClient.get(`https://api.apixu.com/v1/current.json?key=${apiKey}&q=${city}`);
+		return this.httpClient.get(
+			`http://api.weatherstack.com/current?access_key=${apiKey}&query=${city}`
+		);
 	}
 }
