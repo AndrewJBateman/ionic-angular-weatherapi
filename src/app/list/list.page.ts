@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { WeatherService } from "../services/weather.service";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
-// ionic storage
 import { Storage } from "@ionic/storage-angular";
 
 @Component({
@@ -42,7 +41,7 @@ export class ListPage implements OnInit {
 						.getWeatherFromApi("madrid")
 						.subscribe((weather) => {
 							this.weather = weather;
-							console.log(weather);
+							console.log("weather from madrid, storage empty", weather);
 						});
 				} else {
 					this.weatherService.getWeatherFromApi(city).subscribe((weather) => {

@@ -1,6 +1,6 @@
 # Ionic Angular WeatherApi
 
-App to display weather data from the [Weatherstack weather API](https://weatherstack.com/documentation) using the [Ionic 5 framework](https://ionicframework.com/docs).
+* App to display weather data from the [Weatherstack weather API](https://weatherstack.com/documentation) using the [Ionic 5 framework](https://ionicframework.com/docs).
 
 ## Table of contents
 
@@ -85,14 +85,13 @@ getWeather() {
 
 ## Features
 
-* Searches for weather data in any counry of the world.
+* Searches for weather data in any city of the world.
 * Ionic storage module used: based on LocalForage with support for SQLite, a file-based approach.
-  There are issues with browser storage in local apps.
 
 ## Status & To-do list
 
-* Status: Working.
-* To-do: add functionality
+* Status: Working. Updated april 2021
+* To-do: Add to menu options - list of cities searched for etc.
 
 ## Inspiration
 

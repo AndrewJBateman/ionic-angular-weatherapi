@@ -3,14 +3,14 @@
 		<ion-buttons slot="start">
 			<ion-menu-button></ion-menu-button>
 		</ion-buttons>
-		<ion-title> Conditions </ion-title>
+		<ion-title>Weather</ion-title>
 	</ion-toolbar>
 </ion-header>
 
 <ion-content class="main">
 	<div class="details">
-		<h2><strong>Weather Conditions</strong></h2>
-		<p>Type the name of the city where you want to check the weather.</p>
+		<h2><strong>Current Weather</strong></h2>
+		<p>Type city name</p>
 
 		<form [formGroup]="weatherForm" (ngSubmit)="search(weatherForm.value)">
 			<ion-input
@@ -33,8 +33,10 @@
 				<p><strong>{{weather.current.weather_descriptions[0]}}</strong></p>
 			</div>
 			<div>
-				<p>{{weather.location.name}}, <span>{{weather.location.country}}</span> </p>
-          <p>{{weather.location.localtime}}</p>
+				<p>
+					{{weather.location.name}}, <span>{{weather.location.country}}</span>
+				</p>
+				<p>{{weather.location.localtime}}</p>
 			</div>
 		</div>
 	</div>

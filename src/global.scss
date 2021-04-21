@@ -10,7 +10,7 @@
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
 
-$custom-color: #7bcdfd;
+$custom-color: #0D47A1;
 
 
 * {
@@ -45,18 +45,18 @@ $custom-color: #7bcdfd;
     margin: 0 auto;
     border-radius: 10px;
     max-width: 600px;
-   
+
 }
 
 
 .main > div.details{
     width: 70%;
-    margin: 50px auto;
+    margin: 20px auto;
     background: rgba(255,255,255,0.9);
     padding: 10px;
     border-radius: 10px;
-  
-   
+
+
 }
 
 .weather {
@@ -65,7 +65,7 @@ $custom-color: #7bcdfd;
 
 .weather > div {
     text-align: center;
-    
+
 }
 
 .weather img {
@@ -77,17 +77,23 @@ $custom-color: #7bcdfd;
     margin: 0px;
 }
 .checkWeather {
-    padding: 10px;
+    padding: 10px !important;
+    margin-bottom: 10px !important;
     display: block;
-    color: #222;
+    color: white;
     text-decoration: none;
-    background: #a8ff78;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #78ffd6, #a8ff78); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    background:  #0D47A1 !important;
     width: 40%;
     margin: 0 auto;
     border-radius: 20px;
+}
+
+.checkWeather:active {
+  border-color: transparent;
+}
+
+button:active {
+  border-color: transparent !important;
 }
 
 ion-menu-button {
@@ -95,12 +101,12 @@ ion-menu-button {
 }
 
 ion-input {
- 
+
     border-bottom: 1px solid $custom-color;
     font-size: 1.2rem !important;
     margin-top: 20px !important;
     margin-bottom: 20px !important;
-   
+
 }
 .big {
     font-size: 4rem;
@@ -113,13 +119,13 @@ ion-button{
     width: 60% !important;
     --background: $custom-color;
  }
- 
+
 button:disabled {
     background: rgb(214, 214, 214);
     cursor: not-allowed;
 }
  @media screen and (max-width: 900px) {
-     
+
     .main h1 {
         font-size: 3rem;
         line-height: 3rem;
