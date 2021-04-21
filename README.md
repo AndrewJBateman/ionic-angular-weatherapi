@@ -31,7 +31,7 @@
 
 ## Screenshots
 
-![Ionic page](./img/.png)
+![Ionic page](./img/weather.png)
 
 ## Technologies
 
@@ -85,8 +85,8 @@ getWeather() {
 
 ## Features
 
-* Searches for weather data in any city of the world.
-* Ionic storage module used: based on LocalForage with support for SQLite, a file-based approach.
+* Searches for weather data in any city of the world
+* Ionic storage module used
 
 ## Status & To-do list
 

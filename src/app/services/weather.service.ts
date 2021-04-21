@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 
-const apiKey = "";
+const apiKey = "45be76ae867d6487064c93552078b67f";
 
 @Injectable({
 	providedIn: "root",
