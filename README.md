@@ -1,6 +1,12 @@
 # Ionic Angular WeatherApi
 
 * App to display weather data from the [Weatherstack weather API](https://weatherstack.com/documentation) using the [Ionic 5 framework](https://ionicframework.com/docs).
+* **Note:** to open web links in a new window use: _ctrl+click on link_
+
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/ionic-angular-weatherapi?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/ionic-angular-weatherapi?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/ionic-angular-weatherapi?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/ionic-angular-weatherapi?style=plastic)
 
 ## Table of contents
 
@@ -36,7 +42,7 @@
 ## Technologies
 
 * [Ionic v5](https://ionicframework.com/)
-* [Angular v11](https://angular.io/)
+* [Angular v12](https://angular.io/)
 * [Ionic/angular v5](https://www.npmjs.com/package/@ionic/angular)
 * [Ionic storage-angular v3](https://www.npmjs.com/package/@ionic/storage-angular)
 * [Weatherstack weather API](https://weatherstack.com/documentation)
@@ -90,7 +96,7 @@ getWeather() {
 
 ## Status & To-do list
 
-* Status: Working. Updated april 2021
+* Status: Working. Updated may 2021
 * To-do: Add to menu options - list of cities searched for etc.
 
 ## Inspiration
