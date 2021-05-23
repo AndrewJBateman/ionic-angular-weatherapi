@@ -1,6 +1,7 @@
 # Ionic Angular WeatherApi
 
 * App to display weather data from the [Weatherstack weather API](https://weatherstack.com/documentation) using the [Ionic 5 framework](https://ionicframework.com/docs).
+* Some changes were made to the code so it would work in the atest Angular version.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/ionic-angular-weatherapi?style=plastic)
