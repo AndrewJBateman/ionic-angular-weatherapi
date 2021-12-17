@@ -1,6 +1,6 @@
 # Ionic Angular WeatherApi
 
-* App to display weather data from the [Weatherstack weather API](https://weatherstack.com/documentation) using the [Ionic 5 framework](https://ionicframework.com/docs).
+* App to display weather data from the [Weatherstack weather API](https://weatherstack.com/documentation) using the [Ionic framework](https://ionicframework.com/docs).
 * Some changes were made to the code so it would work in the latest Angular version.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
@@ -42,14 +42,16 @@
 
 ## Technologies
 
-* [Ionic v5](https://ionicframework.com/)
-* [Angular v12](https://angular.io/)
-* [Ionic/angular v5](https://www.npmjs.com/package/@ionic/angular)
+* [Ionic v6](https://ionicframework.com/)
+* [Angular v13](https://angular.io/)
+* [Ionic/angular v6](https://www.npmjs.com/package/@ionic/angular)
 * [Ionic storage-angular v3](https://www.npmjs.com/package/@ionic/storage-angular)
 * [Weatherstack weather API](https://weatherstack.com/documentation)
 
 ## Setup
 
+* `npm i` to install dependencies
+* Get yourself an API key from [weatherstack.com](https://weatherstack.com/) and add to `weather.service.ts` line 4
 * To start the server on _localhost://8100_ type: 'ionic serve'
 
 ## Code Examples
@@ -97,8 +99,8 @@ getWeather() {
 
 ## Status & To-do list
 
-* Status: Working. Updated may 2021
-* To-do: Add to menu options - list of cities searched for etc.
+* Status: Working.
+* To-do: Add to menu options - list of cities searched for etc. Convert to use Angular async pipe
 
 ## Inspiration
 
