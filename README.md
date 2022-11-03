@@ -43,7 +43,7 @@
 ## :signal_strength: Technologies
 
 * [Ionic v6](https://ionicframework.com/)
-* [Angular v13](https://angular.io/)
+* [Angular v14](https://angular.io/)
 * [Ionic/angular v6](https://www.npmjs.com/package/@ionic/angular)
 * [Ionic storage-angular v3](https://www.npmjs.com/package/@ionic/storage-angular)
 * [Weatherstack weather API](https://weatherstack.com/documentation)
