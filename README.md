@@ -13,18 +13,18 @@
 
 * [Ionic Angular WeatherApi](#ionic-angular-weatherapi)
   * [Table of contents](#table-of-contents)
-  * [General info](#general-info)
-  * [Screenshots](#screenshots)
-  * [Technologies](#technologies)
-  * [Setup](#setup)
-  * [Code Examples](#code-examples)
-  * [Features](#features)
-  * [Status & To-do list](#status--to-do-list)
-  * [Inspiration](#inspiration)
+  * [:books: General info](#books-general-info)
+  * [:camera: Screenshots](#camera-screenshots)
+  * [:signal_strength: Technologies](#signal_strength-technologies)
+  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:computer: Code Examples](#computer-code-examples)
+  * [:cool: Features](#cool-features)
+  * [:clipboard: Status & To-do list](#clipboard-status--to-do-list)
+  * [:clap: Inspiration](#clap-inspiration)
   * [:file_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
-## General info
+## :books: General info
 
 * The [Weatherstack weather API](https://weatherstack.com/documentation) is a fully managed weather API platform that provides extensive APIs
   that supply the following data:
@@ -36,11 +36,11 @@
 * Time zone
 * Geolocation data
 
-## Screenshots
+## :camera: Screenshots
 
 ![Ionic page](./img/weather.png)
 
-## Technologies
+## :signal_strength: Technologies
 
 * [Ionic v6](https://ionicframework.com/)
 * [Angular v13](https://angular.io/)
@@ -48,13 +48,13 @@
 * [Ionic storage-angular v3](https://www.npmjs.com/package/@ionic/storage-angular)
 * [Weatherstack weather API](https://weatherstack.com/documentation)
 
-## Setup
+## :floppy_disk: Setup
 
 * `npm i` to install dependencies
 * Get yourself an API key from [weatherstack.com](https://weatherstack.com/) and add to `weather.service.ts` line 4
 * To start the server on _localhost://8100_ type: 'ionic serve'
 
-## Code Examples
+## :computer: Code Examples
 
 * Extract from `weather.service.ts` that gets data from the API.
 
@@ -92,17 +92,17 @@ getWeather() {
 }
 ```
 
-## Features
+## :cool: Features
 
 * Searches for weather data in any city of the world
 * Ionic storage module used
 
-## Status & To-do list
+## :clipboard: Status & To-do list
 
 * Status: Working.
 * To-do: Add to menu options - list of cities searched for etc. Convert to use Angular async pipe
 
-## Inspiration
+## :clap: Inspiration
 
 * [Aldo Caamal: Simple Weather App ( Ionic 4 / Angular 7 / Apixu API )](https://www.youtube.com/watch?v=P6RDIjF66dw&t=137s).
 
