@@ -36,7 +36,7 @@
 				<p>
 					{{weather.location.name}}, <span>{{weather.location.country}}</span>
 				</p>
-				<p>{{weather.location.localtime}}</p>
+				<p>{{weather.location.localtime | date:'medium' }}</p>
 			</div>
 		</div>
 	</div>
